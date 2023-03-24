@@ -47,5 +47,6 @@ nvm install 14 # node version needs to be greater than 14 for datahub frontend l
 ```
 Once the prerequisites are installed, deploy the forwarding server at `localhost:3000` using
 ```
+cd datahub-web-react/
 yarn install && yarn run start
 ```
