@@ -33,7 +33,17 @@ Easiest way to deploy a running instance of Datahub is by pulling the official D
 cd docker/
 docker compose -p datahub -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-without-neo4j.m1.yml -f docker-compose.dev.yml up
 ```
-How to deploy the local build? That still needs figuring out.
+### What is the easiest way to deploy a local build?
+One needs discipline to have a hiccup free local deployment.
+- Step 1:  
+It is highly recommended that any existing docker containers, volumes and images which previous deployments have used be deleted.
+Refer to the [docker-super-nuke.sh](https://github.com/sdas1994/margay-readme/blob/main/scripts/docker-super-nuke.sh) script on how to do this.
+- Step 2:  
+Once your docker is clean, running a simple
+```
+./gradlew quickstart
+```
+from your datahub root directory should work. Lord help you if it doesn't.
 
 ## Working on Frontend
 If the requirement is to tinker on the frontend elements, the best way is to deploy a working version of Datahub first, and then follow the guides mentioned [here](https://datahubproject.io/docs/datahub-web-react). The best way to develop on frontend then is to start a forwarding server. Ensure node related packages are installed.
