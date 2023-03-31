@@ -45,6 +45,8 @@ Once your docker is clean, running a simple
 ```
 from your datahub root directory should work. Lord help you if it doesn't.
 
+One rudimentary way of getting a failing build to work is to perform a deep clean of the repository. I tend to delete the repository entirely, pull the master branch and start the build process again. Only after the build works on main, do I pull my branch. You can also try deleting the generated files instead of nuking the entire repository first, to see if that fixes it.
+
 ## Working on Frontend
 If the requirement is to tinker on the frontend elements, the best way is to deploy a working version of Datahub first, and then follow the guides mentioned [here](https://datahubproject.io/docs/datahub-web-react). The best way to develop on frontend then is to start a forwarding server. Ensure node related packages are installed.
 ```
